@@ -1,6 +1,8 @@
 # Maintenance AI Agent
 
-A take-home assessment for building a Maintenance Support AI Agent.
+A take-home assessment for building an AI-powered maintenance support agent. The goal is to create an intelligent assistant that can handle tenant maintenance requests — understanding issues, providing self-help guidance when appropriate, and coordinating professional help when needed.
+
+This tests your ability to design and implement an AI agent that reasons about problems, retrieves relevant information, takes actions through tools, and handles real-world complexity.
 
 ## What This Is
 
