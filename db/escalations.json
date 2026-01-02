@@ -1,0 +1,21 @@
+[
+  {
+    "id": "esc-001",
+    "tenantId": "tenant-002",
+    "propertyManagerId": "pm-001",
+    "createdAt": "2024-06-12T10:30:00Z",
+    "status": "resolved",
+    "issueDescription": "Leaking tap in bathroom - requires professional repair",
+    "resolutionNotes": "Property manager arranged repair. Issue resolved."
+  },
+  {
+    "id": "esc-002",
+    "tenantId": "tenant-004",
+    "propertyManagerId": "pm-002",
+    "createdAt": "2024-02-28T09:15:00Z",
+    "status": "resolved",
+    "issueDescription": "Boiler pressure dropping repeatedly - possible leak in system",
+    "resolutionNotes": "Property manager coordinated inspection. No leak detected, tenant shown how to repressurize."
+  }
+]
+

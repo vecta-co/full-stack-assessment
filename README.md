@@ -40,9 +40,10 @@ The agent should gather enough context from the tenant to understand the issue �
 Some issues have simple fixes that tenants can do themselves (e.g., resetting a tripped circuit breaker, repressurising a boiler). The agent should check the knowledge base and guide the tenant through self-resolution when possible.
 
 **3. Escalate When Needed**
-If the issue can't be self-resolved:
-- **Contractor required**: Find an appropriate contractor, book a time slot, and create a work order that is displayed in the chat to the customer
-- **Needs human review**: Some issues require a property manager to get involved — escalate to the right person
+If the issue can't be self-resolved, escalate to the appropriate property manager. The tenant will receive a direct call from them. The system should:
+- Find the right property manager based on the tenant's building
+- Create an escalation record
+- Inform the tenant that they'll receive a call
 
 ## Repo Structure
 
@@ -56,9 +57,8 @@ maintenance-ai-agent/
 ├── db/                     # Data files (explore these!)
 │   ├── knowledge.json
 │   ├── tenants.json
-│   ├── contractors.json
 │   ├── property_managers.json
-│   └── work_orders.json
+│   └── escalations.json
 ├── server.js               # Express API
 ├── package.json
 └── README.md
@@ -71,9 +71,8 @@ Explore the `db/` folder to understand what data is available. The chat interfac
 | Term | Description |
 |------|-------------|
 | **Tenant** | A resident who rents a property unit. They report maintenance issues and interact with the AI agent. |
-| **Property Manager** | The person responsible for overseeing buildings and units. Handles escalations that require human judgment or approval. |
-| **Contractor** | A skilled tradesperson (plumber, electrician, etc.) who can be dispatched to fix maintenance issues that tenants can't resolve themselves. |
-| **Work Order** | A formal request created when a contractor needs to visit. Contains details like the issue, scheduled time, contractor assigned, and priority level. |
+| **Property Manager** | The person responsible for overseeing buildings and units. When an issue is escalated, they call the tenant directly to help resolve it. |
+| **Escalation** | A record created when an issue requires human intervention. Contains the issue details, assigned property manager, and status. |
 | **Knowledge** | A collection of guides, policies, and troubleshooting articles. Used by the agent to help tenants self-resolve common issues before escalating. |
 
 ## Getting Started

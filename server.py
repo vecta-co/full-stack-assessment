@@ -48,3 +48,4 @@ if __name__ == '__main__':
     print(f'API server running at http://localhost:{PORT}')
     app.run(host='0.0.0.0', port=PORT, debug=True)
 
+
